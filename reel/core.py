@@ -83,7 +83,7 @@ def get_url(url):
     url = url.replace(SLASH_REPLACEMENT, '/')
 
     try:
-        r = requests.get(url)
+        r = requests.get(url, params=request.args)
         r.raise_for_status()
 
     except requests.HTTPError, why:
