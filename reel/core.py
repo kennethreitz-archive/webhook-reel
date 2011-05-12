@@ -83,6 +83,10 @@ def get_url(url):
     url = url.replace(SLASH_REPLACEMENT, '/')
 
     try:
+        app.logger.debug('GET-ing {url}'.format(url=url))
+        print 'GET-ing {url}'.format(url=url)
+        print str(request.args)
+
         r = requests.get(url, params=request.args)
         r.raise_for_status()
 
