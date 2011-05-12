@@ -29,10 +29,8 @@ def generate_url():
 def get_url(url):
     """Gets given URL."""
 
-    # werzburg routing workaround
-    url = url.replace('\\\\', '/')
-
-    r = requests.get(url)
+    # cheap werzburg routing workaround
+    url = url.replace('\\', '/')
 
     try:
         r = requests.get(url)
