@@ -75,7 +75,7 @@ def get_new_url_json():
 
 
 
-@app.route('/get/<url>', methods=['GET'])
+@app.route('/get/<url>', methods=['GET', 'POST'])
 def get_url(url):
     """Gets given URL."""
 
