@@ -15,7 +15,8 @@ Routes
     Text box for entering request type and URL.
 
 ``/get/<url>``
-    GETs given url.
+    GETs given url. ``/`` are replaced with ``\``.
+
 
 
 Future
